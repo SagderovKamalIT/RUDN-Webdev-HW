@@ -8,7 +8,6 @@ const Header = () => {
     <>
 
     
-    <div className="header__wrap">
 
       <div className={styles.header}>
   
@@ -28,7 +27,7 @@ const Header = () => {
     
     </div>
 
-    </div>
+ 
 
     </>
 

@@ -1,11 +1,11 @@
-import Header from "../../components/Header/Header";
+import HeaderAboutSection from "../../components/HeaderAboutSection/HeaderAboutSection";
 
 const Home = () => {
  return (
 
   <>
 
-   <Header />
+   <HeaderAboutSection/>
   
   </>
 

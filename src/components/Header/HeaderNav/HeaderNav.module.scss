@@ -1,0 +1,37 @@
+@use "../../../styles/variables" as *;
+
+.header__list {
+  display: flex;
+  gap: 4rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.header__schedule {
+  font-size: 0.813rem;
+  font-weight: 400;
+  line-height: 150%;
+  color: $white;
+}
+
+
+@media (max-width: 1024px) {
+  .header__list {
+    gap: 3rem;
+  }
+
+    .header__schedule {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .header__list {
+    gap: 1rem;
+  }
+
+  .header__schedule {
+    font-size: 0.45rem;
+  }
+}

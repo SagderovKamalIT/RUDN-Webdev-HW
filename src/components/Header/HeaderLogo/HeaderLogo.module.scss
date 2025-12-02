@@ -1,0 +1,19 @@
+@use "../../../styles/variables" as *;
+
+.header__logo {
+  color: $white;
+  font-size: 1.313rem;
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  .header__logo {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .header__logo {
+    font-size: 0.65rem;
+  }
+}

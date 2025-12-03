@@ -1,3 +1,4 @@
+import AssortmentSection from "../../components/AssortmentSection/AssortmentSection";
 import HeaderAboutSection from "../../components/HeaderAboutSection/HeaderAboutSection";
 
 const Home = () => {
@@ -6,7 +7,8 @@ const Home = () => {
   <>
 
    <HeaderAboutSection/>
-  
+   <AssortmentSection />
+   
   </>
 
  )

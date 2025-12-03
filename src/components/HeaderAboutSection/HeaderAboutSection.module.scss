@@ -1,4 +1,4 @@
-@use '../../styles/core' as *;
+@use "../../styles/core" as *;
 
 .background {
   background: url(../../assets/images/background.png) no-repeat;
@@ -7,30 +7,30 @@
   width: 100%;
   height: fit-content;
 
-   position: relative;
+  position: relative;
   overflow: hidden;
+  z-index: 1;
 
-  
-  // &::before {
-  //   content: "";
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   width: 100%;
-  //   height: 100%; 
-  //    background: url(../assets/images/about-background.png) no-repeat;
-  //   background-size: contain;
-  //   background-position: center;
-  //   z-index: 1;
-  // }
-
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../../assets/images/about-background.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+    z-index: -1;
+  }
 }
 
-// @media (max-width: 460px)   {
-//   .background {
-//        &::before {
-//       width: 100%;
-//       height: 100%;
-//       background-size: cover;
-//     }
-// }
+@media (max-width: 460px) {
+  .background {
+    &::before {
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+    }
+  }
+}

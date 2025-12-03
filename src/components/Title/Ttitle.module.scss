@@ -1,0 +1,19 @@
+.title {
+  font-family: "Montserrat-c", sans-serif;
+  font-size: 3rem;
+  line-height: 125%;
+  letter-spacing: -0.02em;  
+}
+
+
+@media (max-width: 1024px)  {
+  .title {
+      font-size: 1.95rem;
+  }
+}
+
+@media (max-width: 460px)  {
+  .title {
+     font-size: 1.5rem;
+  }
+}

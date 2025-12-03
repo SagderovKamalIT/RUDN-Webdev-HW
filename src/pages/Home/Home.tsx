@@ -1,5 +1,7 @@
 import AssortmentSection from "../../components/AssortmentSection/AssortmentSection";
+import Footer from "../../components/Footer/Footer";
 import HeaderAboutSection from "../../components/HeaderAboutSection/HeaderAboutSection";
+import OrdersSection from "../../components/OrdersSection/OrdersSection";
 
 const Home = () => {
  return (
@@ -8,6 +10,8 @@ const Home = () => {
 
    <HeaderAboutSection/>
    <AssortmentSection />
+   <OrdersSection />
+   <Footer />
    
   </>
 

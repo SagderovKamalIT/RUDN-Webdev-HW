@@ -20,9 +20,7 @@ const AssortmentCard = ({ id, name, description, price, image }: AssortmentCardP
         </div>
         <div className={styles.assortment__infoCost}>
           <span className={styles.assortment__infoPrice}>{price}</span>
-          {/* <a href="#" className={`${styles.assortment__infoButton} ${styles.openModalFromCard}`}>
-            Заказать
-          </a> */}
+         
 
           <OrderCounter price={price} />
         </div>

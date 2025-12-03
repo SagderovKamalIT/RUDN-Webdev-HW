@@ -1,0 +1,122 @@
+@use "../../styles/variables" as *;
+
+.footer {
+  position: relative;
+  padding: 19.5rem 0 5rem 0;
+  background-color: $romance;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url(../../assets/images/clouds-background-top.png);
+    background-size: cover;
+     width: 100%;
+    max-width: 1920px;
+    height: auto;
+    aspect-ratio: 1920 / 284;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+    margin: 0 auto;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: row;
+    gap: 2.688rem;
+    justify-content: center;
+  }
+
+  &__link,
+  p {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    color: #7e868e;
+    text-decoration: none;
+  }
+
+  p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1024px) {
+  .footer {
+  padding: 13rem 0 4rem 0;
+  background-color: $romance;
+
+  &::after {
+     width: 100%;
+      max-width: 1024px; 
+      height: auto;
+      aspect-ratio: 1024 / 284; 
+      background-size: contain; 
+      background-repeat: no-repeat;
+  }
+
+
+    &__container {
+      gap: 1rem;
+    }
+
+    &__list {
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__link,
+    p {
+      font-size: 9px;
+      line-height: 140%;
+    }
+  }
+}
+
+@media (max-width: 660px) {
+  .footer {
+    padding: 10rem 0 3rem 0;
+
+      &::after {
+      width: 100%;
+      max-width: 660px;
+      height: auto;
+      aspect-ratio: 660 / 200; 
+      background-size: contain; 
+    }
+
+
+    &__container {
+      gap: 0.75rem;
+    }
+
+    &__list {
+      gap: 0.5rem;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__link,
+    p {
+      font-size: 8px;
+      line-height: 135%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .footer {
+    padding: 7rem 0 3rem 0;
+
+
+  }
+}
+
+

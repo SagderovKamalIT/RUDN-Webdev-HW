@@ -8,8 +8,16 @@ import madnessCape from "../../assets/images/assortment/мыс-безумия.pn
 import cloudFairy from "../../assets/images/assortment/облачная-сказк.png";
 import darkKnight from "../../assets/images/assortment/темный-рыцарь.png";
 
+export interface AssortmentItem {
+  id: number;
+  name: string;
+  description: string;
+  price: string;
+  image: string; 
+}
 
-export const assortmentData = [
+
+export const assortmentData: AssortmentItem[] = [
   { id: 1, name: "Кремовый замок", description: "Нежный крем любого цвета на выбор, ванильная основа", price: "150 ₽/шт.", image: creamCastle },
   { id: 2, name: "Малиновый рай", description: "Воздушный крем, темная основа и ягода малины", price: "150 ₽/шт.", image: raspberryParadise },
   { id: 3, name: "Фейерверк", description: "Разноцветный крем, с бисквитной основой", price: "150 ₽/шт.", image: fireworks },

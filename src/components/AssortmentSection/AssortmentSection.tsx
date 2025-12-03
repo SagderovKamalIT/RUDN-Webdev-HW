@@ -1,7 +1,6 @@
 import styles from "./AssortmentSection.module.scss"
-import AssortmentCard from "./AssortmentCard";
-import { assortmentData } from "./AssortmentData";
 import Title from "../Title/Title";
+import AssortmentTable from "./AssortmentTable";
 
 
 const AssortmentSection = () => {
@@ -12,24 +11,9 @@ const AssortmentSection = () => {
 
     <Title className={styles.assortment__title}>Для любых событий и дорогих вам людей</Title>
 
-  
+    <AssortmentTable />
 
-    <div className={styles.assortment__list}>
 
-       {assortmentData.map(item => (
-            <AssortmentCard
-              key={item.id}
-              id={item.id}
-              name={item.name}
-              description={item.description}
-              price={item.price}
-              image={item.image}
-            />
-          ))}
-
-         </div> 
-
-      
 
   </div>
 </section>

@@ -31,9 +31,6 @@
 
     &Title {
       font-weight: 700;
-      font-size: 3rem;
-      line-height: 125%;
-      letter-spacing: -0.02em;
       color: $white;
     }
 
@@ -85,9 +82,9 @@
         width: 7rem;
       }
 
-      &Title {
-        font-size: 1.8rem;
-      }
+      // &Title {
+      //   font-size: 1.8rem;
+      // }
 
       &Description {
         font-size: 1.25rem;
@@ -128,9 +125,9 @@
         width: 4.5rem;
       }
 
-      &Title {
-        font-size: 1.1rem;
-      }
+      // &Title {
+      //   font-size: 1.1rem;
+      // }
 
       &Description {
         font-size: 0.775rem;

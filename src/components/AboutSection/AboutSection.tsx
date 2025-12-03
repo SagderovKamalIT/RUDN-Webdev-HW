@@ -1,8 +1,8 @@
+import Title from "../Title/Title";
 import AboutButton from "./AboutButton";
 import AboutParagraph from "./AboutParagraph";
 import styles from "./AboutSection.module.scss";
 import AboutSpan from "./AboutSpan";
-import AboutTitle from "./AboutTitle";
 
 const AboutSection = () => {
   return (
@@ -13,9 +13,10 @@ const AboutSection = () => {
             <div className={styles.about__info}>
               <AboutSpan>ВКУСНЕЙШИЕ</AboutSpan>
 
-              <AboutTitle>
+              <Title className={styles.about__infoTitle} >
                 Пирожные и капкейки от 150 ₽/шт. с доставкой по Санкт-Петербургу
-              </AboutTitle>
+              </Title>
+
 
               <AboutParagraph>
                 Приготовим за 3 часа в день заказа. <br />

@@ -6,7 +6,7 @@ const OrdersSection = () => {
   return (
     <section className={styles.orders}>
       <div className={styles.orders__text}>
-        <Title>Сделали более 3.000 заказов за 2 года</Title>
+        <Title  size="lg" tag="h2" >Сделали более 3.000 заказов за 2 года</Title>
 
         <p>Посмотрите фото реальных заказов из нашего instagram</p>
       </div>

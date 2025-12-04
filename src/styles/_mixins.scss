@@ -5,25 +5,30 @@
   max-width: $max-width;
   box-sizing: border-box;
   margin: 0 auto;
+  align-items: center
 }
 
-@mixin btn($bg, $color, $font-size, $p-top, $p-right, $p-bottom,$p-left, $brd) { 
+@mixin btn-base($bg, $color, $brd) {
   background: $bg;
   color: $color;
-  font-size: $font-size;
-  padding: $p-top $p-right $p-bottom  $p-left;
-  border-radius: $brd;
-  cursor: pointer;
-  transition: all 0.2s ease;
   font-family: inherit;
+  cursor: pointer;
   border: none;
+  border-radius:  $brd;
+  transition: all 0.2s ease;
 
-   &:hover {
+  &:hover {
     transform: scale(1.03);
-    background-color: $river-bed; 
-    color: $white; 
-    cursor: pointer;
+    background-color: $river-bed;
+    color: $white;
   }
 }
 
-$base-url: '/candy-shop';
+
+@mixin btn-size($font-size, $p-top, $p-right, $p-bottom, $p-left) {
+  font-size: $font-size;
+  padding: $p-top $p-right $p-bottom $p-left;
+}
+
+
+

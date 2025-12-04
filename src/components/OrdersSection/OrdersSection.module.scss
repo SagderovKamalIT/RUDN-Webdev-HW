@@ -1,20 +1,17 @@
 @use "../../styles/mixins" as *;
 
 .orders {
+   display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
   &__text {
     display: flex;
     flex-direction: column;
     gap: 0.875rem;
     align-items: center;
-    margin-bottom: 5rem;
+   
 
-    h2 {
-      font-size: 3rem;
-      font-weight: 500;
-      line-height: 125%;
-      letter-spacing: -0.02em;
-      text-align: center;
-    }
 
     p {
       font-size: 1.5rem;
@@ -47,12 +44,10 @@
 
 @media (max-width: 1024px) {
   .orders {
+    gap: 3rem;
     &__text {
-      margin-bottom: 3rem;
-      h2 {
-        font-size: 1.95rem;
-        margin-bottom: 0.6rem;
-      }
+     
+    
 
       p {
         font-size: 1.2rem;
@@ -68,12 +63,10 @@
 
 @media (max-width: 460px) {
   .orders {
+    gap: 2.5rem;
     &__text {
-      margin-bottom: 2.5rem;
-      h2 {
-        font-size: 1.5rem;
-        margin-bottom: 0;
-      }
+      
+  
 
       p {
         font-size: 1rem;

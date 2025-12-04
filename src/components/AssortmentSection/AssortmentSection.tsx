@@ -1,25 +1,21 @@
-import styles from "./AssortmentSection.module.scss"
+import styles from "./AssortmentSection.module.scss";
 import Title from "../Title/Title";
 import AssortmentTable from "./AssortmentTable";
 
-
 const AssortmentSection = () => {
-
   return (
-    <section className={styles.assortment}>
-  <div className="wrap">
+    <section id="assortment" className={styles.assortment}>
+      <div className={`${styles.assortment__section} wrap`}>
+  
 
-    <Title className={styles.assortment__title}>Для любых событий и дорогих вам людей</Title>
+        <Title size="lg" tag="h2">
+          Для любых событий и дорогих вам людей
+        </Title>
 
-    <AssortmentTable />
-
-
-
-  </div>
-</section>
-
-  )
-
-}
+        <AssortmentTable />
+      </div>
+    </section>
+  );
+};
 
 export default AssortmentSection;

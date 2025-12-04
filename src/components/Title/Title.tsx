@@ -2,11 +2,23 @@ import styles from "./Ttitle.module.scss";
 
 interface TitleProps {
   children: string;
-  className?: string;
+  size?: "xl" | "lg";
+  tag?: "h1" | "h2";
 }
 
-const Title = ({ children, className }: TitleProps) => {
-  return <h2 className={`${styles.title} ${className || ""}`}>{children}</h2>;
+const Title = ({ 
+  children, 
+  size = "xl", 
+  tag = "h1"
+}: TitleProps) => {
+
+  const Tag = tag;
+
+  return (
+    <Tag className={`${styles.title} ${styles[size]}`}>
+      {children}
+    </Tag>
+  );
 };
 
 export default Title;

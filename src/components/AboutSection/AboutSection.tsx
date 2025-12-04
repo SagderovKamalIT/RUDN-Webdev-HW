@@ -1,5 +1,5 @@
 import Title from "../Title/Title";
-import AboutButton from "./AboutButton";
+import Button from "../Button/Button";
 import AboutParagraph from "./AboutParagraph";
 import styles from "./AboutSection.module.scss";
 import AboutSpan from "./AboutSpan";
@@ -13,10 +13,9 @@ const AboutSection = () => {
             <div className={styles.about__info}>
               <AboutSpan>ВКУСНЕЙШИЕ</AboutSpan>
 
-              <Title className={styles.about__infoTitle} >
+              <Title size="xl" tag="h1">
                 Пирожные и капкейки от 150 ₽/шт. с доставкой по Санкт-Петербургу
               </Title>
-
 
               <AboutParagraph>
                 Приготовим за 3 часа в день заказа. <br />
@@ -24,7 +23,9 @@ const AboutSection = () => {
               </AboutParagraph>
 
               <div className={styles.about__action}>
-                <AboutButton>Перейти в каталог</AboutButton>
+                <Button href="#assortment" size="large" variant="primary">
+                  Перейти в каталог
+                </Button>
 
                 <p className={styles.about__actionSubtext}>
                   9 различных <br />

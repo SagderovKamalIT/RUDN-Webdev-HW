@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "./AssortmentSection.module.scss";
+import Button from "../Button/Button";
 
 interface OrderCounterProps {
   price: string;
@@ -13,28 +14,46 @@ const OrderCounter = ({ price }: OrderCounterProps) => {
   const increment = () => setCount(count + 1);
   const decrement = () => setCount(count > 0 ? count - 1 : 0);
 
+  
+
   return (
-    <div className={styles.assortment__ButtonSection} >
+    <div className={styles.assortment__ButtonSection}>
       {count === 0 ? (
-        <button
-          className={`${styles.assortment__infoButton} ${styles.openModalFromCard}`}
+        <Button
           onClick={increment}
+          size="small"
+          variant="primary"
+          className={`${styles.assortment__infoButton} ${styles.openModalFromCard}`}
         >
           Заказать
-        </button>
+        </Button>
       ) : (
         <div className={styles.assortment__container}>
-          <div className={styles.assortment__containerCounter} >
+          <Button
+            size="xs"
+            variant="secondary"
+            className={styles.assortment__containerCounter}
+          >
 
-              <button className={styles.assortment__containerButton} onClick={decrement}>
-                -
-              </button>
-              <span className={styles.assortment__containerValue}>{count}</span>
-              <button className={styles.assortment__containerButton} onClick={increment}>
-                +
-              </button>
-          </div>
-          <span className={styles.assortment__infoButton}>{numericPrice * count} ₽</span>
+            <div className={styles.assortment__containerCounter} >
+            <Button size="xss" onClick={decrement}>
+              −
+            </Button>
+            <span className={styles.assortment__containerValue}>{count}</span>
+            <Button size="xss" onClick={increment}>
+              +
+            </Button>
+
+            </div>
+          </Button>
+
+          <Button
+            size="xs"
+            variant="primary"
+            className={styles.assortment__priceButton}
+          >
+            {numericPrice * count} ₽
+          </Button>
         </div>
       )}
     </div>

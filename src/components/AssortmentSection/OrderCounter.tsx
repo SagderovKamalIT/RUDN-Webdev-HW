@@ -50,6 +50,7 @@ const OrderCounter = ({ price }: OrderCounterProps) => {
           <Button
             size="xs"
             variant="primary"
+            title="Совсем скоро здесь появится переход в корзину!"
             className={styles.assortment__priceButton}
           >
             {numericPrice * count} ₽

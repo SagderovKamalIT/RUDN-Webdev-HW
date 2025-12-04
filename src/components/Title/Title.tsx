@@ -1,7 +1,7 @@
 import styles from "./Ttitle.module.scss";
 
 interface TitleProps {
-  children: string;
+  children: React.ReactNode;
   size?: "xl" | "lg";
   tag?: "h1" | "h2";
 }

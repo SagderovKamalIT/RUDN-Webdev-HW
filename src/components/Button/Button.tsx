@@ -5,6 +5,7 @@ interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  title?: string;
 
   size?: "small" | "large" | "xs" | "xss";
   variant?: "primary" | "secondary";
@@ -15,6 +16,7 @@ const Button = ({
   href,
   className,
   onClick,
+  title,
   size = "large",
   variant = "primary",
 }: ButtonProps) => {
@@ -26,6 +28,7 @@ const Button = ({
     <Tag
       href={href}
       onClick={onClick}
+      title={title}
       className={`
         ${styles.button}
         ${styles[size]}

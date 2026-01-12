@@ -1,0 +1,213 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.assortment {
+  padding: 1rem 0;
+
+  background: url(../../assets/images/assotment-background.png) no-repeat;
+  background-size: contain;
+  background-position: top 13rem left 2rem;
+  z-index: -1;
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+  }
+
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eaeaea;
+    background: $white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04);
+    z-index: 1;
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 3.125rem 2.75rem;
+
+    &Container {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 15.438rem;
+
+      h3 {
+        font-weight: 700;
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: $outer-space;
+      }
+
+      p {
+        font-size: 1rem;
+        line-height: 150%;
+        color: $outer-space;
+      }
+    }
+
+    &Cost {
+      display: flex;
+      flex-direction: column;
+      gap: 0.875rem;
+    }
+
+    &Price {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: $river-bed;
+      line-height: 150%;
+    }
+  }
+
+  &__ButtonSection {
+    width: fit-content;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+
+    gap: 0.5rem;
+    align-items: center;
+
+    &Counter {
+      display: flex;
+      flex-direction: row;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &Span,
+    &Value {
+      font-size: 1.125rem;
+      font-family: inherit;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .assortment {
+    &__section {
+      gap: 3.25rem;
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+
+    &__card {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__info {
+      gap: 1rem;
+      padding: 2.03rem 1.79rem;
+
+      &Container {
+        width: 10.04rem;
+
+        h3 {
+          font-size: 0.975rem;
+          margin-bottom: 4px;
+        }
+
+        p {
+          font-size: 0.65rem;
+          line-height: 97.5%;
+        }
+      }
+
+      &Price {
+        font-size: 0.975rem;
+      }
+    }
+
+    &__container {
+      gap: 0.5rem;
+      &Counter {
+        gap: 0.6rem;
+      }
+
+      &Span,
+      &Value {
+        font-size: 0.73rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .assortment {
+    &__section {
+      gap: 2rem;
+    }
+ 
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+
+    &__card {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__info {
+      gap: 1rem;
+      padding: 2rem 1.5rem;
+
+      &Container {
+        width: 100%;
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 4px;
+        }
+
+        p {
+          font-size: 0.9rem;
+          line-height: 1.5;
+        }
+      }
+
+      &Price {
+        font-size: 1.1rem;
+      }
+    }
+
+    &__container {
+      &Span,
+      &Value {
+        font-size: 0.73rem;
+      }
+    }
+  }
+}

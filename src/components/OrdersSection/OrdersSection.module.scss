@@ -1,0 +1,81 @@
+@use "../../styles/mixins" as *;
+
+.orders {
+   display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+  &__text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    align-items: center;
+   
+
+
+    p {
+      font-size: 1.5rem;
+      font-weight: 400;
+      line-height: 143%;
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.563rem;
+
+    &Item {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .orders {
+    gap: 3rem;
+    &__text {
+     
+    
+
+      p {
+        font-size: 1.2rem;
+      }
+    }
+
+    &__list {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.8rem;
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .orders {
+    gap: 2.5rem;
+    &__text {
+      
+  
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.5rem;
+    }
+  }
+}

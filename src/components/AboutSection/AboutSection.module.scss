@@ -1,0 +1,128 @@
+@use '../../styles/variables' as *;
+@use '../../styles/mixins' as *;
+
+.about {
+  padding-bottom: 28.75rem;
+
+  &__container {
+    max-width: 40.438rem;
+    margin-top: 11.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &Span {
+      padding: 0.625rem 1.125rem;
+      font-size: 0.688rem;
+      line-height: 150%;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: $outer-space;
+      background-color: $white-smoke;
+      width: 8.25rem;
+    }
+
+
+    &Description {
+      font-size: 1.5rem;
+      line-height: 143%;
+      color: $white;
+
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: row;
+    gap: 1.25rem;
+    align-items: center;
+
+
+    &Subtext {
+      font-size: 0.938rem;
+      line-height: 160%;
+      color: $white;
+    }
+  }
+
+}
+
+@media (max-width: 1024px) {
+  .about {
+    padding-bottom: 20rem;
+
+    &__container {
+      max-width: 24rem;
+      margin-top: 2rem;
+      gap: 2rem;
+    }
+
+    &__info {
+      gap: 1rem;
+
+      &Span {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.6rem;
+        width: 7rem;
+      }
+
+
+      &Description {
+        font-size: 1.25rem;
+      }
+    }
+
+    &__action {
+      gap: 1rem;
+
+
+      &Subtext {
+        font-size: 0.813rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 460px) {
+  .about {
+    padding-bottom: 8rem;
+
+    &__container {
+      max-width: 16rem;
+      margin-top: 0.75rem;
+      gap: 1rem;
+    }
+
+    &__info {
+      gap: 0.4rem;
+
+      &Span {
+        padding: 0.25rem 0.4rem;
+        font-size: 0.45rem;
+        width: 4.5rem;
+      }
+
+     
+
+      &Description {
+        font-size: 0.775rem;
+      }
+    }
+
+    &__action {
+      gap: 0.4rem;
+
+      &Subtext {
+        font-size: 0.625rem;
+        line-height: 120%;
+      }
+    }
+  }
+}

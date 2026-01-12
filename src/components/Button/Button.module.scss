@@ -1,0 +1,150 @@
+@use "../../styles/mixins" as *;
+@use "../../styles/variables" as *;
+
+.button {
+  @include btn-base($naples-yellow, $outer-space, 0.5rem);
+
+ 
+}
+
+.large {
+  @include btn-size(1.125rem, 1.875rem, 3.125rem, 1.875rem, 3.125rem);
+  font-weight: 500;
+  text-align: center;
+}
+.small {
+  @include btn-size(1.125rem, 1.25rem, 2.5rem, 1.25rem, 2.5rem);
+}
+
+.xs {
+  @include btn-size(1.125rem, 1.25rem, 1.8rem, 1.25rem, 1.8rem);
+
+   &:hover {
+    transform: none;
+  }
+}
+
+.xss {
+  background: none;
+  font-size: 1.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-flex;
+  justify-content: center;
+  padding: 0;
+
+  &:hover {
+    transform: none;
+    background-color: $white-smoke;
+    color: $outer-space;
+  }
+}
+
+.primary {
+  background-color: $naples-yellow;
+  color: $outer-space;
+}
+
+.secondary {
+  background-color: $white-smoke;
+  color: $outer-space;
+
+  &:hover {
+    background-color: $white-smoke;
+    color: $outer-space;
+  }
+}
+
+@media (max-width: 1024px) {
+
+   .button {
+    border-radius: 0.3rem;
+
+    &:hover {
+      transform: none;
+    }
+ 
+  }
+  .large {
+    font-size: 0.875rem;
+    padding: 0.938rem 2.5rem;
+  }
+
+  .small {
+     @include btn-size(  0.73rem,
+          0.81rem,
+          1.63rem,
+          0.81rem,
+          1.63rem,);
+  }
+
+  .xs {
+       @include btn-size(  0.73rem,
+          0.81rem,
+          1rem,
+          0.81rem,
+          1rem,);
+  }
+  
+
+  .xss {
+     font-size: 0.8rem;
+          width: 1rem;
+          height: 1rem;
+  }
+}
+
+@media (max-width: 460px) {
+  .button {
+    border-radius: 0.2rem;
+
+     &:hover {
+      background-color: $naples-yellow;
+      color: $outer-space;
+    }
+
+ 
+  }
+
+  .large {
+    font-size: 0.7rem;
+    padding: 0.5rem 1.5rem;
+  }
+
+    .small {
+     @include btn-size(  0.75rem,
+          0.9rem,
+          1.5rem,
+          0.75rem,
+          1.5rem,);
+  }
+
+  .xs {
+       @include btn-size(  0.75rem,
+          0.9rem,
+          0.8rem,
+          0.75rem,
+          0.8rem,);
+
+                  &:hover {
+    transform: none;
+    background-color: $white-smoke;
+    color: $outer-space;
+  }
+  }
+  
+
+  .xss {
+      font-size: 0.8rem;
+          width: 1rem;
+          height: 1rem;
+
+                  &:hover {
+    transform: none;
+    background-color: $white-smoke;
+    color: $outer-space;
+  }
+
+   
+  }
+}
